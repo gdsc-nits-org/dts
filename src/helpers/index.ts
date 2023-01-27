@@ -1,3 +1,4 @@
 import cloneNode from "./cloneNode";
+import formatNode from "./formatNode";
 
-export { cloneNode }
+export { cloneNode, formatNode }
