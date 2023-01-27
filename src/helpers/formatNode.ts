@@ -1,5 +1,5 @@
 /* Set xmlns attribute on the node */
-function formatNode(node: HTMLElement | null): Promise<HTMLElement> | Error {
+function formatNode(node: Element | null): Promise<Element> | Error {
   if (node == null) return new Error("HTML Element is null or undefined.");
   return new Promise((resolve, reject) => {
     try {
