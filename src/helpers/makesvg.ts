@@ -6,11 +6,11 @@ function makesvg(node: HTMLElement): SVGSVGElement | Error {
     if(cloned == null)
         return Error("Null cloned element.")
 
-    let svg = document.createElementNS("http://www.w3.org/2000/svg", 'svg')
+    let svg: SVGSVGElement = document.createElementNS("http://www.w3.org/2000/svg", 'svg')
     svg.setAttribute("width", `${node.clientWidth}`)
     svg.setAttribute("height", `${node.clientHeight}`)
 
-    let foreignObject = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
+    let foreignObject: SVGForeignObjectElement = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
     foreignObject.appendChild(cloned)
     svg.appendChild(foreignObject);
     foreignObject.setAttribute("width", "100%")

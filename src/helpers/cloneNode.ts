@@ -15,7 +15,7 @@ function cloneNode(node: HTMLElement): HTMLElement | null {
         const attribute = node.attributes[i]
         clone.setAttribute(attribute.name, attribute.value)
     }
-    for(let i = 0; i < node.children.length; i++){
+    for(let i = 0; i < node.childNodes.length; i++){
         clone.appendChild(node.childNodes[i].cloneNode(true))
     }
     return clone
