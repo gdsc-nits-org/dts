@@ -1,4 +1,4 @@
-import { tosvg } from "./convertors";
+import { tosvg } from "./converters";
 
 function dts(node: HTMLElement, dataURI: Boolean = true){
     return tosvg(node, dataURI)
