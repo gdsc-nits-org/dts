@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-        "outDir": "dist",
+        "outDir": "dist/build",
         "target": "ES2017" /* Transpile to ES2017 */,
         "strict": true /* Enable Strict mode */,
         "noImplicitAny": true /* Raise error on expressions and declarations with an implied 'any' type. */,
