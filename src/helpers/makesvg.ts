@@ -1,14 +1,11 @@
 import cloneNode from "./cloneNode";
+import { calcHeight, calcWidth } from "../utils";
 
 function makesvg(node: HTMLElement): SVGSVGElement | Error {
-    const cloned: HTMLElement | null = cloneNode(node);
-
-    if(cloned == null)
-        return Error("Null cloned element.")
-
+    const cloned: HTMLElement = cloneNode(node);
     let svg: SVGSVGElement = document.createElementNS("http://www.w3.org/2000/svg", 'svg')
-    svg.setAttribute("width", `${node.clientWidth}`)
-    svg.setAttribute("height", `${node.clientHeight}`)
+    svg.setAttribute("width", `${calcWidth(node)}px`)
+    svg.setAttribute("height", `${calcHeight(node)}px`)
 
     let foreignObject: SVGForeignObjectElement = document.createElementNS("http://www.w3.org/2000/svg", "foreignObject");
     foreignObject.appendChild(cloned)
