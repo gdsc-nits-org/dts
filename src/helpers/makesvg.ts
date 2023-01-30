@@ -2,6 +2,11 @@ import cloneNodeWithCSS from "./cloneNode";
 import formatNode from "./formatNode";
 import { calcHeight, calcWidth } from "../utils";
 
+/**
+ * Convert a DOM Node to an SVG Element
+ * @param {HTMLElement} node -The DOM Node to convert to SVG
+ * @returns {Promise<SVGSVGElement>} - A Promise
+ */
 async function makesvg(node: HTMLElement): Promise<SVGSVGElement> {
 	const cloned: HTMLElement = cloneNodeWithCSS(node);
 	await formatNode(cloned);

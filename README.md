@@ -21,4 +21,4 @@ TODO:
 - [ ] Box Shadows are not rendered properly
 - [ ] Publist to NPM registry
 - [ ] Write tests
-- [ ] Document codebase and usage
+- [x] Document codebase and usage

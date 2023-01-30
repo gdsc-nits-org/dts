@@ -9,6 +9,7 @@
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"esbuild": "pnpm run build && node esbuild.config.mjs",
 		"build": "tsc",
+		"docs": "pnpm run build && jsdoc -c jsdoc.conf.json",
 		"pretty": "prettier --write ."
 	},
 	"simple-git-hooks": {
@@ -24,6 +25,7 @@
 	"devDependencies": {
 		"@types/node": "^18.11.18",
 		"esbuild": "^0.17.5",
+		"jsdoc": "^4.0.0",
 		"prettier": "^2.8.3",
 		"simple-git-hooks": "^2.8.1",
 		"ts-node": "^10.9.1",
