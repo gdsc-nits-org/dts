@@ -10,7 +10,8 @@ import dts from "@gdscnits/dts";
 
 (async() => {
     const elem = document.getElementById("main")
-    console.log(await dts(elem, false))
+    // console.log(await dts(elem)); // to get URI
+    console.log(await dts(elem, false)); // to get svg
 })();
 ```
 
@@ -25,17 +26,17 @@ pnpm install
 ```
 3. Build the project
 ```sh
-pnpm run esbuild
+pnpm esbuild
 ```
 
 #### Additional
 4. Setup Docs
 ```sh
-pnpm run docs
+pnpm docs
 ```
 5. Run test
 ```sh
-pnpm run test
+pnpm test
 ```
 
 TODO:
