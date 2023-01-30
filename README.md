@@ -6,9 +6,12 @@ Convert a DOM Node to SVG Element.
 ### Usage:
 
 ```js
-const elem = document.getElementById("main")
-const svgURI = dts(elem) // By default returns a dataURI
-const svg = dts(elem, false) // Returns SVG Element
+import dts from "@gdscnits/dts";
+
+(async() => {
+    const elem = document.getElementById("main")
+    console.log(await dts(elem, false))
+})();
 ```
 
 ### Setup Locally

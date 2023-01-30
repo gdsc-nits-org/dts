@@ -5,5 +5,6 @@ esbuild.build({
 	bundle: true,
 	outfile: "dist/index.js",
 	target: "es6",
+	minify: true,
 	format: "esm",
 });
