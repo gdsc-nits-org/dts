@@ -10,10 +10,11 @@
 		"esbuild": "pnpm run build && node esbuild.config.mjs",
 		"build": "tsc",
 		"docs": "pnpm run build && jsdoc -c jsdoc.conf.json",
-		"pretty": "prettier --write ."
+		"pretty": "prettier --write .",
+		"lint": "eslint . --ext .ts --fix"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "pnpm run pretty"
+		"pre-commit": "pnpm run pretty && pnpm run lint"
 	},
 	"keywords": [
 		"domToSVG",
@@ -24,7 +25,10 @@
 	"license": "GPL-3.0",
 	"devDependencies": {
 		"@types/node": "^18.11.18",
+		"@typescript-eslint/eslint-plugin": "^5.49.0",
+		"@typescript-eslint/parser": "^5.49.0",
 		"esbuild": "^0.17.5",
+		"eslint": "^8.33.0",
 		"jsdoc": "^4.0.0",
 		"prettier": "^2.8.3",
 		"simple-git-hooks": "^2.8.1",

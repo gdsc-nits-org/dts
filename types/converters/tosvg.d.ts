@@ -5,5 +5,5 @@
  * @param {string} dataURI - If set to true(default), return dataURI, else return SVG element.
  * @returns {Promise<string | SVGSVGElement | Error>}
  */
-declare function tosvg(node: HTMLElement, dataURI?: Boolean): Promise<string | SVGSVGElement | Error>;
+declare function tosvg(node: HTMLElement, dataURI?: boolean): Promise<string | SVGSVGElement | Error>;
 export default tosvg;

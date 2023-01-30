@@ -1,2 +1,2 @@
-declare function dts(node: HTMLElement, dataURI?: Boolean): Promise<string | Error | SVGSVGElement>;
+declare function dts(node: HTMLElement, dataURI?: boolean): Promise<string | Error | SVGSVGElement>;
 export default dts;

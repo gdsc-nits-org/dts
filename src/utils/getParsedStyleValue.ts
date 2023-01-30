@@ -9,7 +9,7 @@
  */
 async function getParsedStyleValue(node: HTMLElement, property: string): Promise<number> {
 	await Promise.resolve();
-	let value = window.getComputedStyle(node).getPropertyValue(property);
+	const value = window.getComputedStyle(node).getPropertyValue(property);
 	return parseFloat(value.replace("px", ""));
 }
 

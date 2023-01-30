@@ -15,8 +15,8 @@
 
 async function svg2dataURI(svg: SVGSVGElement): Promise<string> {
 	await Promise.resolve();
-	let s = new XMLSerializer().serializeToString(svg);
-	let dataURI = "data:image/svg+xml," + encodeURIComponent(s);
+	const s = new XMLSerializer().serializeToString(svg);
+	const dataURI = "data:image/svg+xml," + encodeURIComponent(s);
 	return dataURI;
 }
 

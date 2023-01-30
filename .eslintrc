@@ -1,0 +1,27 @@
+{
+  "root": true,
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ],
+  "rules": {
+    "camelcase": "warn",
+    "eqeqeq": "warn",
+    "no-var": "error",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "func-names": "warn",
+    "curly": "warn"
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "allowImportExportEverywhere": true,
+    "ecmaVersion": "latest",
+    "requireConfigFile": false
+  },
+  "env": {
+    "es6": true,
+    "node": true
+  }
+}

@@ -10,11 +10,11 @@ import { calcHeight, calcWidth } from "../utils";
 async function makesvg(node: HTMLElement): Promise<SVGSVGElement> {
 	const cloned: HTMLElement = cloneNodeWithCSS(node);
 	await formatNode(cloned);
-	let svg: SVGSVGElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	const svg: SVGSVGElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 	svg.setAttribute("width", `${await calcWidth(node)}px`);
 	svg.setAttribute("height", `${await calcHeight(node)}px`);
 
-	let foreignObject: SVGForeignObjectElement = document.createElementNS(
+	const foreignObject: SVGForeignObjectElement = document.createElementNS(
 		"http://www.w3.org/2000/svg",
 		"foreignObject"
 	);
