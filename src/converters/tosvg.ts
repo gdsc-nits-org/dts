@@ -4,14 +4,12 @@ can also return the svg node itself if `dataURI` is set to false
 */
 import { svg2dataURI, makesvg } from "../helpers";
 
-function tosvg(
-    node: HTMLElement,
-    dataURI: Boolean = true
-): string | SVGSVGElement | Error {
-    const svg = makesvg(node);
-    if (svg instanceof Error) return Error("Error in coverting DOM node to SVG");
-    if (dataURI) return svg2dataURI(svg);
-    return svg;
+async function tosvg(node: HTMLElement, dataURI: Boolean = true): Promise<string | SVGSVGElement | Error> {
+	await Promise.resolve();
+	const svg = await makesvg(node);
+	if (svg instanceof Error) return Error("Error in coverting DOM node to SVG");
+	if (dataURI) return await svg2dataURI(svg);
+	return svg;
 }
 
 export default tosvg;

@@ -11,10 +11,11 @@ References:
 This helper function converts an SVG DOM Node to a data URI.
 */
 
-function svg2dataURI(svg: SVGSVGElement): string {
-    let s = new XMLSerializer().serializeToString(svg);
-    let dataURI = "data:image/svg+xml," + encodeURIComponent(s);
-    return dataURI;
+async function svg2dataURI(svg: SVGSVGElement): Promise<string> {
+	await Promise.resolve();
+	let s = new XMLSerializer().serializeToString(svg);
+	let dataURI = "data:image/svg+xml," + encodeURIComponent(s);
+	return dataURI;
 }
 
 export default svg2dataURI;

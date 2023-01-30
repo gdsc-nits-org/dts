@@ -15,7 +15,7 @@ const svg = dts(elem, false) // Returns SVG Element
 TODO:
 
 - [x] Replace rollup with esbuild
-- [ ] Make it asynchronous
+- [x] Make it asynchronous
 - [ ] Setup simple-git-hooks
 - [ ] Border Radius is not applied in image
 - [ ] Box Shadows are not rendered properly
