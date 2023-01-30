@@ -6,9 +6,12 @@ Convert a DOM Node to SVG Element.
 ### Usage:
 
 ```js
-const elem = document.getElementById("main")
-const svgURI = dts(elem) // By default returns a dataURI
-const svg = dts(elem, false) // Returns SVG Element
+import dts from "@gdscnits/dts";
+
+(async() => {
+    const elem = document.getElementById("main")
+    console.log(await dts(elem, false))
+})();
 ```
 
 ### Setup Locally
@@ -30,6 +33,10 @@ pnpm run esbuild
 ```sh
 pnpm run docs
 ```
+5. Run test
+```sh
+pnpm run test
+```
 
 TODO:
 
@@ -39,5 +46,10 @@ TODO:
 - [ ] Border Radius is not applied in image
 - [ ] Box Shadows are not rendered properly
 - [ ] Publish to NPM registry
-- [ ] Write tests
+- [x] Setup tests
+- [ ] Test all helpers
 - [x] Document codebase and usage
+
+
+## Credit to where its due:
+[dom-to-image](https://github.com/tsayen/dom-to-image)
