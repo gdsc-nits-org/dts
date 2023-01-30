@@ -10,8 +10,12 @@ import { svg2dataURI, makesvg } from "../helpers";
 async function tosvg(node: HTMLElement, dataURI = true): Promise<string | SVGSVGElement | Error> {
 	await Promise.resolve();
 	const svg = await makesvg(node);
-	if (svg instanceof Error) {return Error("Error in coverting DOM node to SVG");}
-	if (dataURI) {return await svg2dataURI(svg);}
+	if (svg instanceof Error) {
+		return Error("Error in coverting DOM node to SVG");
+	}
+	if (dataURI) {
+		return await svg2dataURI(svg);
+	}
 	return svg;
 }
 
