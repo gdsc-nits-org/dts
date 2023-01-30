@@ -10,7 +10,8 @@
 		"build": "tsc",
 		"docs": "pnpm run build && jsdoc -c jsdoc.conf.json",
 		"pretty": "prettier --write .",
-		"lint": "eslint . --ext .ts --fix"
+		"lint": "tsc --noEmit && eslint . --ext .ts --fix",
+		"prepublish": "pnpm esbuild"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm run pretty && pnpm run lint"
@@ -20,7 +21,10 @@
 		"dts",
 		"d2s"
 	],
-	"types": "./types",
+	"types": "./types/index.d.ts",
+	"engines": {
+		"node": ">=16.14.0"
+	},
 	"author": "",
 	"license": "GPL-3.0",
 	"devDependencies": {
@@ -35,5 +39,9 @@
 		"ts-node": "^10.9.1",
 		"tslib": "^2.5.0",
 		"typescript": "^4.9.4"
-	}
+	},
+	"files": [
+		"dist",
+		"types"
+	]
 }
