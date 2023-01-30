@@ -16,7 +16,7 @@ TODO:
 
 - [x] Replace rollup with esbuild
 - [x] Make it asynchronous
-- [ ] Setup simple-git-hooks
+- [x] Setup simple-git-hooks
 - [ ] Border Radius is not applied in image
 - [ ] Box Shadows are not rendered properly
 - [ ] Publist to NPM registry
