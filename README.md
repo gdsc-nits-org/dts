@@ -33,6 +33,10 @@ pnpm run esbuild
 ```sh
 pnpm run docs
 ```
+5. Run test
+```sh
+pnpm run test
+```
 
 TODO:
 
@@ -42,7 +46,8 @@ TODO:
 - [ ] Border Radius is not applied in image
 - [ ] Box Shadows are not rendered properly
 - [ ] Publish to NPM registry
-- [ ] Write tests
+- [x] Setup tests
+- [ ] Test all helpers
 - [x] Document codebase and usage
 
 
