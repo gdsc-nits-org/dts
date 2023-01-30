@@ -44,3 +44,7 @@ TODO:
 - [ ] Publish to NPM registry
 - [ ] Write tests
 - [x] Document codebase and usage
+
+
+## Credit to where its due:
+[dom-to-image](https://github.com/tsayen/dom-to-image)
