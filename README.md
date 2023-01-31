@@ -3,6 +3,12 @@
 
 Convert a DOM Node to SVG Element.
 
+### Install from npm registry
+
+```console
+npm i @gdscnits/dts
+```
+
 ### Usage:
 
 ```js
