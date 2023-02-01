@@ -9,8 +9,9 @@
  * - https://youtu.be/dUhP4JWgwdo
  *
  * This helper function converts an SVG DOM Node to a data URI.
- * @param {SVGSVGElement} svg - The SVG Element to convert from.
- * @returns {Promise<string>} - The dataURI string
+ *
+ * @param svg - The SVG Element to convert from.
+ * @returns The dataURI string
  */
-declare function svg2dataURI(svg: SVGSVGElement): Promise<string>;
+declare function svg2dataURI(svg: SVGSVGElement): string;
 export default svg2dataURI;

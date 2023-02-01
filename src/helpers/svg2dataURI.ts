@@ -9,12 +9,12 @@
  * - https://youtu.be/dUhP4JWgwdo
  *
  * This helper function converts an SVG DOM Node to a data URI.
- * @param {SVGSVGElement} svg - The SVG Element to convert from.
- * @returns {Promise<string>} - The dataURI string
+ *
+ * @param svg - The SVG Element to convert from.
+ * @returns The dataURI string
  */
 
-async function svg2dataURI(svg: SVGSVGElement): Promise<string> {
-	await Promise.resolve();
+function svg2dataURI(svg: SVGSVGElement) {
 	const s = new XMLSerializer().serializeToString(svg);
 	const dataURI = "data:image/svg+xml," + encodeURIComponent(s);
 	return dataURI;

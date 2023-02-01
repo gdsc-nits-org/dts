@@ -1,14 +1,17 @@
 /**
  * For a given node and a node.style property,
  * convert the pixel value string to float.
- * Example:
- * getParsedStyleValue(node, 'width') -> returns width of node in float.
- * @param {HTMLElement} node - The node whose property value needs to be parsed.
- * @param {string} property - The property which needs to be parsed.
- * @returns {Promise<number>} - A Promise
+ *
+ * @example
+ * ```ts
+ * getParsedStyleValue(node, 'width'); //returns width of node in float.
+ * ```
+ *
+ * @param node - The node whose property value needs to be parsed.
+ * @param property - The property which needs to be parsed.
+ * @returns
  */
-async function getParsedStyleValue(node: HTMLElement, property: string): Promise<number> {
-	await Promise.resolve();
+function getParsedStyleValue(node: HTMLElement, property: string) {
 	const value = window.getComputedStyle(node).getPropertyValue(property);
 	return parseFloat(value.replace("px", ""));
 }

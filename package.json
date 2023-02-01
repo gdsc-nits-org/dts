@@ -12,7 +12,7 @@
 		"docs": "pnpm run build && jsdoc -c jsdoc.conf.json",
 		"pretty": "prettier --write .",
 		"lint": "tsc --noEmit && eslint . --ext .ts --fix",
-		"prepublish": "pnpm esbuild"
+		"prepublish": "pnpm test && pnpm esbuild"
 	},
 	"simple-git-hooks": {
 		"pre-commit": "pnpm run pretty && pnpm run lint"

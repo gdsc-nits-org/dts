@@ -9,23 +9,24 @@ import applystyles from "./applystyles";
  * from node to clone.
  *
  * TODO: Skip cloning of nodes that are specified in filter.
- * @param {HTMLElement} node Clone the DOM with their children along with all the styles.
- * @returns {HTMLElement} - The cloned node
+ *
+ * @param node Clone the DOM with their children along with all the styles.
+ * @returns The cloned node
  */
 
-function cloneNodeWithCSS(node: HTMLElement): HTMLElement {
-	if (node.childNodes.length === 0) {
-		return node.cloneNode(false) as HTMLElement;
-	}
+function cloneNodeWithCSS(node: HTMLElement) {
 	const clone = node.cloneNode(false);
-	applystyles(node, clone as HTMLElement);
-	const children: HTMLElement[] = [];
-	node.childNodes.forEach((_node) => {
-		children.push(cloneNodeWithCSS(_node as HTMLElement));
+	// Can't apply styles on children with true for `deep`
+
+	if (node.childNodes.length === 0) {
+		applystyles(node, clone as HTMLElement);
+		return clone as HTMLElement;
+	}
+
+	node.childNodes.forEach((child) => {
+		clone.appendChild(cloneNodeWithCSS(child as HTMLElement));
 	});
-	children.forEach((_cnode) => {
-		clone.appendChild(_cnode);
-	});
+
 	return clone as HTMLElement;
 }
 

@@ -1,10 +1,10 @@
 /**
- * Set xmlns attribute to "http://www.w3.org/1999/xhtml" on a DOM node
- * @param {HTMLElement} node - A DOM Node to format
- * @returns {Promise<HTMLElement>} - A Promise
+ * Set `xmlns` attribute to "http://www.w3.org/1999/xhtml" on a DOM node
+ *
+ * @param node - A DOM Node to format
+ * @returns The node with formatting
  */
-async function formatNode(node: HTMLElement): Promise<HTMLElement> {
-	await Promise.resolve();
+function formatNode(node: HTMLElement) {
 	node.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
 	return node;
 }

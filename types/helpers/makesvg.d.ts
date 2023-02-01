@@ -1,7 +1,8 @@
 /**
  * Convert a DOM Node to an SVG Element
- * @param {HTMLElement} node -The DOM Node to convert to SVG
- * @returns {Promise<SVGSVGElement>} - A Promise
+ *
+ * @param node -The DOM Node to convert to SVG
+ * @returns A Promise
  */
-declare function makesvg(node: HTMLElement): Promise<SVGSVGElement>;
+declare function makesvg(node: HTMLElement): SVGSVGElement;
 export default makesvg;
