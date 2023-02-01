@@ -50,9 +50,10 @@ TODO:
 - [x] Replace rollup with esbuild
 - [x] Make it asynchronous
 - [x] Setup simple-git-hooks
-- [ ] Border Radius is not applied in image
+- [x] Border Radius applied in image
 - [ ] Box Shadows are not rendered properly
-- [ ] Publish to NPM registry
+- [ ] Make it work with React components
+- [x] Publish to NPM registry
 - [x] Setup tests
 - [ ] Test all helpers
 - [x] Document codebase and usage
