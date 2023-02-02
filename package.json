@@ -1,21 +1,22 @@
 {
 	"name": "@gdscnits/dts",
-	"version": "1.1.1",
+	"version": "1.1.2",
 	"description": "Convert DOM Node to SVG",
 	"main": "dist/index.js",
 	"type": "module",
 	"scripts": {
-		"test": "pnpm build && mocha ./tests/test.js",
+		"test": "pnpm lint && pnpm build && pnpm link --global && mocha ./tests/test.js",
 		"prepare": "pnpm simple-git-hooks",
-		"esbuild": "pnpm run build && node esbuild.config.mjs",
-		"build": "tsc",
-		"docs": "pnpm run build && jsdoc -c jsdoc.conf.json",
+		"ts": "tsc",
+		"esbuild": "pnpm ts && node esbuild.config.mjs",
+		"build": "pnpm esbuild",
+		"docs": "pnpm ts && jsdoc -c jsdoc.conf.json",
 		"pretty": "prettier --write .",
 		"lint": "tsc --noEmit && eslint . --ext .ts --fix",
-		"prepublish": "pnpm test && pnpm esbuild"
+		"prepublish": "pnpm test && pnpm docs"
 	},
 	"simple-git-hooks": {
-		"pre-commit": "pnpm run pretty && pnpm run lint"
+		"pre-commit": "pnpm pretty && pnpm lint"
 	},
 	"keywords": [
 		"domToSVG",

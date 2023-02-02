@@ -12,7 +12,7 @@
  * @returns
  */
 function getParsedStyleValue(node: HTMLElement, property: string) {
-	const value = window.getComputedStyle(node).getPropertyValue(property);
+	const value = getComputedStyle(node).getPropertyValue(property);
 	return parseFloat(value.replace("px", ""));
 }
 

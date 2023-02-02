@@ -14,15 +14,15 @@ import applystyles from "./applystyles";
  * @returns The cloned node
  */
 
-function cloneNodeWithCSS(node: HTMLElement) {
+function cloneNodeWithCSS(node: Node) {
 	const clone = node.cloneNode(false);
 	// Can't apply styles on children with true for `deep`
 
 	if (node.childNodes.length === 0) {
-		applystyles(node, clone as HTMLElement);
 		return clone as HTMLElement;
 	}
 
+	applystyles(node, clone as HTMLElement);
 	node.childNodes.forEach((child) => {
 		clone.appendChild(cloneNodeWithCSS(child as HTMLElement));
 	});

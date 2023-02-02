@@ -11,5 +11,5 @@
  * @param node Clone the DOM with their children along with all the styles.
  * @returns The cloned node
  */
-declare function cloneNodeWithCSS(node: HTMLElement): HTMLElement;
+declare function cloneNodeWithCSS(node: Node): HTMLElement;
 export default cloneNodeWithCSS;

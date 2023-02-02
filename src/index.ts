@@ -1,8 +1,8 @@
 import { tosvg } from "./converters";
 
-function dts(node: HTMLElement | undefined, dataURI = true) {
+function dts(node: Node /* | HTMLElement */, dataURI = true) {
 	if (!node || !(node instanceof HTMLElement) || typeof dataURI !== "boolean") {
-		return "";
+		return null;
 	}
 
 	return tosvg(node, dataURI);
