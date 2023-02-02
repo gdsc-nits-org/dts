@@ -6,13 +6,13 @@
  */
 function applystyles(node: Node, cloned: HTMLElement) {
 	// Check if node is really element
-	if (!node.ELEMENT_NODE) {
+	if (node.nodeType !== node.ELEMENT_NODE) {
 		return;
 	}
 
 	const styles = getComputedStyle(node as Element);
 
-	Object.values(styles).map((val: any) => {
+	Object.values(styles).map((val) => {
 		cloned.style.setProperty(val, styles.getPropertyValue(val), styles.getPropertyPriority(val));
 	});
 }

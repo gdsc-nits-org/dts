@@ -9,7 +9,7 @@ import { calcHeight, calcWidth } from "../utils";
  * @returns A Promise
  */
 function makesvg(node: HTMLElement) {
-	const cloned: HTMLElement = cloneNodeWithCSS(node);
+	const cloned = cloneNodeWithCSS(node);
 	formatNode(cloned);
 
 	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
