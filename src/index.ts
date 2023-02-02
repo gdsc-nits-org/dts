@@ -1,6 +1,9 @@
 import { tosvg } from "./converters";
 
-async function dts(node: HTMLElement, dataURI = true) {
+function dts(node: HTMLElement | undefined, dataURI = true) {
+	if (!node || !(node instanceof HTMLElement) || typeof dataURI !== "boolean") {
+		return "";
+	}
 	return tosvg(node, dataURI);
 }
 

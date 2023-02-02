@@ -3,19 +3,17 @@ import { svg2dataURI, makesvg } from "../helpers";
 /**
  * Converts a DOM Node to SVG. Returns data URI by default but
  * can also return the svg node itself if `dataURI` is set to false
- * @param {HTMLElement} node - The DOM node which will be converted to SVG
- * @param {string} dataURI - If set to true(default), return dataURI, else return SVG element.
- * @returns {Promise<string | SVGSVGElement | Error>}
+ *
+ * @param node - The DOM node which will be converted to SVG
+ * @param dataURI - If set to true(default), return dataURI, else return SVG element.
  */
-async function tosvg(node: HTMLElement, dataURI = true): Promise<string | SVGSVGElement | Error> {
-	await Promise.resolve();
-	const svg = await makesvg(node);
-	if (svg instanceof Error) {
-		return Error("Error in coverting DOM node to SVG");
-	}
+function tosvg(node: HTMLElement, dataURI = true) {
+	const svg = makesvg(node);
+
 	if (dataURI) {
-		return await svg2dataURI(svg);
+		return svg2dataURI(svg);
 	}
+
 	return svg;
 }
 

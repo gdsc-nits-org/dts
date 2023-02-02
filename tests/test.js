@@ -1,4 +1,4 @@
-import { domNode, domNode as formattedNode } from "./helpers/formatNode.test.js";
+import { domNode } from "./helpers/formatNode.test.js";
 import chai from "chai";
 
 describe("Test formatNode", () => {
