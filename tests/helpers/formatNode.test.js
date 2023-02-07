@@ -1,11 +1,9 @@
-import { JSDOM } from "jsdom";
 import formatNode from "../../dist/build/helpers/formatNode.js";
-import { parseHTML, getFilePath } from "../common/setupDOM.js";
+import { html } from "../common/setupDOM.js";
 
-const htmlNode = getFilePath("tests/common/testNode.html");
-const parsedNode = parseHTML(htmlNode);
-
-const domNode = new JSDOM(parsedNode).window.document.getElementById("main");
-await formatNode(domNode);
-
-export { domNode };
+test("Test: formatNode helper", () => {
+	document.body.innerHTML = html;
+	const node = document.getElementById("main");
+	formatNode(node);
+	expect(node.getAttribute("xmlns")).toBe("http://www.w3.org/1999/xhtml");
+});

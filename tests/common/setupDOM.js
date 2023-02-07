@@ -1,4 +1,3 @@
-import { JSDOM } from "jsdom";
 import fs from "fs";
 import path from "path";
 
@@ -12,10 +11,7 @@ const parseHTML = (path) => {
 	return fs.readFileSync(path, { encoding: "utf-8" }).toString();
 };
 
-const __setupHTML = getFilePath("tests/common/setup.html");
-var html = parseHTML(__setupHTML);
+const __setupHTML = getFilePath("./tests/common/html/node.html");
+const html = parseHTML(__setupHTML);
 
-const dom = new JSDOM(html);
-const document = dom.window.document.getElementById("testzone");
-
-export { getFilePath, parseHTML, document };
+export { getFilePath, parseHTML, html };
