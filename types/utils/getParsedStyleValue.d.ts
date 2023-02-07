@@ -9,7 +9,7 @@
  *
  * @param node - The node whose property value needs to be parsed.
  * @param property - The property which needs to be parsed.
- * @returns
+ * @returns {number}
  */
 declare function getParsedStyleValue(node: HTMLElement, property: string): number;
 export default getParsedStyleValue;

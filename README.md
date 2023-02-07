@@ -16,8 +16,8 @@ import dts from "@gdscnits/dts";
 
 (async() => {
     const elem = document.getElementById("main")
-    // console.log(await dts(elem)); // to get URI
-    console.log(await dts(elem, false)); // to get svg
+    // console.log(dts(elem)); // to get URI
+    console.log(dts(elem, false)); // to get svg
 })();
 ```
 
@@ -28,10 +28,10 @@ import { useRef } from "react";
 
 const Component = () => {
     const divref = useRef(null);
-    const getSVG = async() => {
+    const getSVG = () => {
         if(divref == null) return;
         // const svg = await dts(divref) // to get URI
-        const svg = await dts(divref, false) // to get SVG
+        const svg = dts(divref, false) // to get SVG
         console.log(svg)
     }
     return (
@@ -66,11 +66,17 @@ pnpm esbuild
 ```
 
 #### Additional
-4. Setup Docs
+4. View Docs
 ```sh
 pnpm docs
 ```
-5. Run test
+
+5. Build Docs
+```sh
+pnpm run docs
+```
+
+6. Run test
 ```sh
 pnpm test
 ```
