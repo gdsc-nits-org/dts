@@ -3,15 +3,15 @@ import applystyles from "../../dist/build/helpers/applystyles.js";
 
 test("Test: applystyles helper", () => {
 	document.body.innerHTML = html;
-	const styled_node = document.getElementById("main");
-	const plain_node = document.getElementById("plain");
-	applystyles(styled_node, plain_node);
-	const styles = window.getComputedStyle(styled_node);
-	const applied = window.getComputedStyle(plain_node);
+	const styledNode = document.getElementById("main");
+	const plainNode = document.getElementById("plain");
+	applystyles(styledNode, plainNode);
+	const styles = window.getComputedStyle(styledNode);
+	const applied = window.getComputedStyle(plainNode);
 	expect(styles).toBeDefined();
 	expect(applied).toBeDefined();
 
-	Object.values(styles).map((val, index) => {
+	Object.values(styles).map((val) => {
 		const valInPlain = applied.getPropertyValue(val);
 		const priorityInPlain = applied.getPropertyPriority(val);
 		const valInStyled = styles.getPropertyValue(val);
