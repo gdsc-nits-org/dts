@@ -87,11 +87,11 @@ TODO:
 - [x] Make it asynchronous
 - [x] Setup simple-git-hooks
 - [x] Border Radius applied in image
-- [ ] Box Shadows are not rendered properly
+- [ ] ~Box Shadows are not rendered properly~(Box Shadows not feasable with SVG)
 - [x] Make it work with React components
 - [x] Publish to NPM registry
 - [x] Setup tests
-- [ ] Test all helpers
+- [x] Test all helpers
 - [x] Document codebase and usage
 
 

@@ -1,4 +1,4 @@
-import { html } from "../common/setupDOM";
+import { html } from "../common/setupDOM.js";
 import getParsedStyleValue from "../../dist/build/utils/getParsedStyleValue.js";
 import calcHeight from "../../dist/build/utils/calcHeight.js";
 
