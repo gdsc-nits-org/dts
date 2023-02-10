@@ -19,10 +19,10 @@ function cloneNodeWithCSS(node: HTMLElement) {
 	// Can't apply styles on children with true for `deep`
 
 	if (node.childNodes.length === 0) {
-		applystyles(node, clone as HTMLElement);
 		return clone as HTMLElement;
 	}
 
+	applystyles(node, clone as HTMLElement);
 	node.childNodes.forEach((child) => {
 		clone.appendChild(cloneNodeWithCSS(child as HTMLElement));
 	});
