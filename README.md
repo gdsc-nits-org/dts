@@ -13,12 +13,9 @@ npm i @gdscnits/dts
 
 ```js
 import dts from "@gdscnits/dts";
-
-(async() => {
-    const elem = document.getElementById("main")
-    // console.log(dts(elem)); // to get URI
-    console.log(dts(elem, false)); // to get svg
-})();
+const elem = document.getElementById("main")
+// console.log(dts(elem)); // to get URI
+console.log(dts(elem, false)); // to get svg
 ```
 
 For React components, create a ref for the div whose SVG is needed.
@@ -30,7 +27,7 @@ const Component = () => {
     const divref = useRef(null);
     const getSVG = () => {
         if(divref == null) return;
-        // const svg = await dts(divref) // to get URI
+        // const svg = dts(divref) // to get URI
         const svg = dts(divref, false) // to get SVG
         console.log(svg)
     }
