@@ -6,5 +6,9 @@ test("Test: CloneNodeWithCSS helper", () => {
 	const node = document.getElementById("main");
 	const cloned = cloneNodeWithCSS(node);
 	expect(cloned).toBeDefined();
-	expect(cloned).toStrictEqual(node);
+	const nodeStyles = window.getComputedStyle(node);
+	const cloneStyles = window.getComputedStyle(cloned);
+	Object.values(nodeStyles).map((val) => {
+		expect(nodeStyles.getPropertyValue(val)).toStrictEqual(cloneStyles.getPropertyValue(val));
+	});
 });
