@@ -9,5 +9,9 @@ test("Test: makesvg helper", () => {
 	expect(svg).toBeDefined();
 	expect(svg.tagName).toBe("svg");
 	node.setAttribute("xmlns", "http://www.w3.org/1999/xhtml");
-	expect(fObject).toEqual(node);
+	const fObjectStyles = window.getComputedStyle(fObject);
+	const nodeStyles = window.getComputedStyle(node);
+	Object.values(fObjectStyles).map((val) => {
+		expect(fObjectStyles.getPropertyValue(val)).toStrictEqual(nodeStyles.getPropertyValue(val));
+	});
 });

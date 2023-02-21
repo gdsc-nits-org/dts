@@ -116,6 +116,7 @@ TODO:
 - [x] Publish to NPM registry
 - [x] Setup tests
 - [x] Test all helpers
+- [ ] Fix some broken testcases
 - [x] Document codebase and usage
 
 
