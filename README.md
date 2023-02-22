@@ -9,7 +9,7 @@ Convert a DOM Node to SVG Element.
 
 ### For running in Client side, simply use the CDN script:
 ```js
-import dts from "https://cdn.jsdelivr.net/npm/@gdscnits/dts@latest/dist/index.min.js";
+import dts from "https://cdn.jsdelivr.net/npm/@gdscnits/dts/dist/index.min.js";
 const elem = document.getElementById("main")
 // console.log(dts(elem)); // to get URI
 console.log(dts(elem, false)); // to get svg
